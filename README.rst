@@ -9,3 +9,7 @@ Configuration
 Map the diff toggle command to a key sequence by adding the following to your ``.vimrc``::
 
     map <leader>dod :DiffofferToggleDiff<CR>
+
+To toggle diff filler (see ``'diffopt'``) as well, use::
+
+    map <leader>dof :DiffofferToggleFiller<CR>
