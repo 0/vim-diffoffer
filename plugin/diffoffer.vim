@@ -2,7 +2,20 @@
 function! s:toggle_diff()
 	if &diff
 		diffoff
+
+		" Restore the saved options.
+		if exists('b:diffoffer_options')
+			execute 'setlocal' b:diffoffer_options
+		endif
 	else
+		" Save the options that :diffoff doesn't restore.
+		redir => l:set
+		silent execute 'set scrollbind? cursorbind? scrollopt? wrap? foldmethod? foldcolumn?'
+		redir END
+
+		" Get rid of the NULs that :set inserts.
+		let b:diffoffer_options = substitute(l:set, '[\x00]', ' ', 'g')
+
 		diffthis
 	endif
 endfunction
