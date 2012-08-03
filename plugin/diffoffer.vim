@@ -1,4 +1,5 @@
-function! s:toggle()
+" diff
+function! s:toggle_diff()
 	if &diff
 		diffoff
 	else
@@ -6,4 +7,4 @@ function! s:toggle()
 	endif
 endfunction
 
-command! DiffofferToggle :call <SID>toggle()
+command! DiffofferToggleDiff :call <SID>toggle_diff()

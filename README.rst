@@ -1,11 +1,11 @@
 vim-diffoffer
 =============
 
-Allows for easy toggling of diff mode for the current buffer.
+Quick and easy management of diff settings for the current buffer.
 
 Configuration
 =============
 
-Map the toggle command to a key sequence by adding the following to your ``.vimrc``::
+Map the diff toggle command to a key sequence by adding the following to your ``.vimrc``::
 
-    map <leader>dt :DiffofferToggle<CR>
+    map <leader>dod :DiffofferToggleDiff<CR>
