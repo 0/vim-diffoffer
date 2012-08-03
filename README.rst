@@ -13,3 +13,7 @@ Map the diff toggle command to a key sequence by adding the following to your ``
 To toggle diff filler (see ``'diffopt'``) as well, use::
 
     map <leader>dof :DiffofferToggleFiller<CR>
+
+Not really a feature of this plugin, but a useful mapping to go along with the others is::
+
+    map <leader>dou :diffupdate<CR>
